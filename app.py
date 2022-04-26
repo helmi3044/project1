@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder="templates")
 
 @app.route('/')
 def main():
-    return render_template('main.html')
+    return render_template('index.html')
 
 # Redirecting the API to predict the result
 
@@ -25,7 +25,7 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template("main.html", prediction_text="Prediksi Harga Taksi Adalah : {}".format(output))
+    return render_template("index.html", prediction_text="Prediksi Harga Taksi Adalah : {}".format(output))
 
 
 if __name__ == '__main__':
